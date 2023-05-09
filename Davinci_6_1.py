@@ -75,7 +75,7 @@ def new_row(symb, row_dict):
     if(symb == "AMZN"): col = 'C'
     if(symb == "BABA"): col = 'D'
     if(symb == "GS"): col = 'E'
-    if(symb == "FB"): col = 'F'
+    if(symb == "META"): col = 'F'
     if(symb == "JD"): col = 'G'
     if(symb == "MRVL"): col = 'H'
     if(symb == "MSFT"): col = 'I'
@@ -98,7 +98,7 @@ def new_row(symb, row_dict):
     if(symb == 'EBAY'): col = 'Z'
     if(symb == 'CAT'): col = 'AA'
     if(symb == 'DHI'): col = 'AB'
-    if(symb == 'TWTR'): col = 'AC'
+    if(symb == 'GOOGL'): col = 'AC'
     if(symb == 'ZM'): col = 'AD'
     if(symb == 'DT'): col = 'AE'
     if(symb == 'QFIN'): col = 'AF'
@@ -116,19 +116,19 @@ def new_row(symb, row_dict):
     J = "=E" + str(row) + "+$J$2*$AC$2"
     K = "=StockData!" + col + "5" #close  
     if(symb == "AAPL"): reg = "=0.1863*(D"+str(row)+')+47.546'
-    if(symb == "AMZN"): reg = "=6.5288*(D"+str(row)+')+1455.20'
+    if(symb == "AMZN"): reg = "=0.1611*(D"+str(row)+')+80'
     if(symb == "BABA"): reg = "=0.1564*(D"+str(row)+')+217.84'
     if(symb == "GS"): reg = "=1.2335*(D"+str(row)+')+206.63'
-    if(symb == "FB"): reg = "=0.1387*(D"+str(row)+')+176.66'
+    if(symb == "META"): reg = "=0.1387*(D"+str(row)+')+176.66'
     if(symb == "JD"): reg = "=0.2027*(D"+str(row)+')+22.952'
     if(symb == "MRVL"): reg = "=0.0522*(D"+str(row)+')+21.586'
     if(symb == "MSFT"): reg = "=0.3085*(D"+str(row)+')+135.19'
     if(symb == "NFLX"): reg = "=1.0441*(D"+str(row)+')+246.91'
     if(symb == "NVDA"): reg = "=0.292*(D"+str(row)+')+29.2'
-    if(symb == "QQQ"): reg = "=0.1208*(D"+str(row)+')+95.709'
-    if(symb == "SNAP"): reg = "=0.0847*(D"+str(row)+')+8.3067'
-    if(symb == "SPY"): reg = "=0.101*(D"+str(row)+')+205.08'
-    if(symb == "TSLA"): reg = "=1.5923*(D"+str(row)+')-26.864'
+    if(symb == 'QQQ'): reg = "=0.1208*(D"+str(row)+')+95.709'
+    if(symb == 'SNAP'): reg = "=0.0847*(D"+str(row)+')+8.3067'
+    if(symb == 'SPY'): reg = "=0.101*(D"+str(row)+')+205.08'
+    if(symb == 'TSLA'): reg = "=0.8081*(D"+str(row)+')+80.85'
     if(symb == "WFC"): reg = "=-0.0162*(D"+str(row)+')+27.398'
     if(symb == "DKNG"): reg = "=0.1711*(D"+str(row)+')+12.659'
     if(symb == "NIO"): reg = "=0.2254*(D"+str(row)+')-9.1507'
@@ -142,7 +142,7 @@ def new_row(symb, row_dict):
     if(symb == 'EBAY'): reg = "=0.0774*(D"+str(row)+')+40.321'
     if(symb == 'CAT'): reg = "=0.4712*(D"+str(row)+')+90.463'
     if(symb == 'DHI'): reg = "=0.0674*(D"+str(row)+')+35.307'
-    if(symb == 'TWTR'): reg = "=0.136*(D"+str(row)+')+25.161'
+    if(symb == 'GOOGL'): reg = "=0.0964*(D"+str(row)+')+73.136'
     if(symb == 'ZM'): reg = "=1.5398*(D"+str(row)+')+92.041'
     if(symb == 'DT'): reg = "=0.0731*(D"+str(row)+')+21.302'
     if(symb == 'QFIN'): reg = "=0.022*(D"+str(row)+')+7.3941'
@@ -154,11 +154,11 @@ def new_row(symb, row_dict):
     N = "=M" + str(row -1) + "-M" + str(row)
     #day_num = int(sheet_instance.cell(row, 4).value) + 1
     day_num = row - 3
-    if(symb == "AAPL"): reg1 = "(0.1863*("+str(day_num)+')+47.546))'
-    if(symb == "AMZN"): reg1 = "(6.5288*("+str(day_num)+')+1455.20))'
+     if(symb == "AAPL"): reg1 = "(0.1863*("+str(day_num)+')+47.546))'
+    if(symb == "AMZN"): reg1 = "(0.1611*("+str(day_num)+')+80))'
     if(symb == "BABA"): reg1 = "(0.1564*("+str(day_num)+')+217.84))'
     if(symb == "GS"): reg1 = "(1.2335*("+str(day_num)+')+206.63))'
-    if(symb == "FB"): reg1 = "(0.1387*("+str(day_num)+')+176.66))'
+    if(symb == "META"): reg1 = "(0.1387*("+str(day_num)+')+176.66))'
     if(symb == "JD"): reg1 = "(0.2027*("+str(day_num)+')+22.952))'
     if(symb == "MRVL"): reg1 = "(0.0522*("+str(day_num)+')+21.586))'
     if(symb == "MSFT"): reg1 = "(0.3085*("+str(day_num)+')+135.19))'
@@ -167,7 +167,7 @@ def new_row(symb, row_dict):
     if(symb == "QQQ"): reg1 = "(0.1208*("+str(day_num)+')+95.709))'
     if(symb == "SNAP"): reg1 = "(0.0847*("+str(day_num)+')+8.3067))'
     if(symb == "SPY"): reg1 = "(0.101*("+str(day_num)+')+205.08))'
-    if(symb == "TSLA"): reg1 = "(1.5923*("+str(day_num)+')-26.864))'
+    if(symb == "TSLA"): reg1 = "(0.8081*("+str(day_num)+')+80.85))'
     if(symb == "WFC"): reg1 = "(-0.0162*("+str(day_num)+')+27.398))'
     if(symb == "DKNG"): reg1 = "(0.1711*("+str(day_num)+')+12.659))'
     if(symb == "NIO"): reg1 = "(0.2254*("+str(day_num)+')-9.1507))'
@@ -181,7 +181,7 @@ def new_row(symb, row_dict):
     if(symb == "EBAY"): reg1 = "(0.0774*("+str(day_num)+')+40.321))'
     if(symb == "CAT"): reg1 = "(0.4712*("+str(day_num)+')+90.463))'
     if(symb == 'DHI'): reg1 = "(0.0674*("+str(day_num)+')+35.307))'
-    if(symb == "TWTR"): reg1 = "(0.136*("+str(day_num)+')+25.161))'
+    if(symb == "GOOGL"): reg1 = "(0.0964*("+str(day_num)+')+73.136))'
     if(symb == "ZM"): reg1 = "(1.5398*("+str(day_num)+')+92.041))'
     if(symb == "DT"): reg1 = "(0.0731*("+str(day_num)+')+21.302))'
     if(symb == "QFIN"): reg1 = "(0.022*("+str(day_num)+')+7.3941))'
@@ -274,7 +274,7 @@ def end_the_day(symb, row_dict):
         C = sheet_instance.cell(5, 5).value
         T = sheet_instance.cell(6, 5).value
         P = sheet_instance.cell(8, 5).value
-    if symb == "FB":
+    if symb == "META":
         O = sheet_instance.cell(2, 6).value
         H = sheet_instance.cell(3, 6).value
         L = sheet_instance.cell(4, 6).value
@@ -435,7 +435,7 @@ def end_the_day(symb, row_dict):
         C = sheet_instance.cell(5, 28).value
         T = sheet_instance.cell(6, 28).value
         P = sheet_instance.cell(8, 28).value 
-    if symb == "TWTR":
+    if symb == "GOOGL":
         O = sheet_instance.cell(2, 29).value
         H = sheet_instance.cell(3, 29).value
         L = sheet_instance.cell(4, 29).value
@@ -559,7 +559,7 @@ def classification(symb):
     if(symb == "AMZN"): a = a + "!T3"
     if(symb == "BABA"): a = a + "!T4"
     if(symb == "GS"): a = a + "!T5"
-    if(symb == "FB"): a = a + "!T6"
+    if(symb == "META"): a = a + "!T6"
     if(symb == "JD"): a = a + "!T7"
     if(symb == "MRVL"): a = a + "!T8"
     if(symb == "MSFT"): a = a + "!T9"
@@ -582,7 +582,7 @@ def classification(symb):
     if(symb == 'EBAY'): a = a + "2!T6"
     if(symb == 'CAT'): a = a + "2!T7"
     if(symb == 'DHI'): a = a + "2!T3"
-    if(symb == 'TWTR'): a = a + "2!T16"
+    if(symb == 'GOOGL'): a = a + "2!T16"
     if(symb == 'ZM'): a = a + "2!T17"
     if(symb == 'DT'): a = a + "!T6"
     if(symb == 'QFIN'): a = a + "!T13"
@@ -595,12 +595,13 @@ def batch_pre(stocks):
     pre_data = {}
     key = "624b51b375a1fae6682dc955e6159fc1"
     for sym in stocks:
-        url = "https://financialmodelingprep.com/api/v3/quote/" +sym+ ",FB?apikey=" + key
-        r = requests.get(url)
-        data = r[0]
-        dataIN = data['results']
-        p = dataIN['P']
-        pre_data[sym] = ("","", pre_market_low(sym),"","",classification(sym), p, 'test')
+      url = "https://financialmodelingprep.com/api/v3/quote/" +sym+ ",FB?apikey=" + key
+      response = urlopen(url, cafile=certifi.where())
+      data = response.read().decode("utf-8")
+      r = json.loads(data) 
+      dataIN = r[0]
+      p = dataIN['price']
+      pre_data[sym] = ("","", pre_market_low(sym),"","",classification(sym), p, 'test')
     return pre_data
 ################################################
 def write_batch_pre(stock_data):
@@ -609,7 +610,7 @@ def write_batch_pre(stock_data):
     #data for open
     B0 = stock_data['AAPL'][0]; B1 = stock_data['AMZN'][0]
     B2 = stock_data['BABA'][0]; B3 = stock_data['GS'][0]
-    B4 = stock_data['FB'][0]; B5 = stock_data['JD'][0]
+    B4 = stock_data['META'][0]; B5 = stock_data['JD'][0]
     B6 = stock_data['MRVL'][0]; B7 = stock_data['MSFT'][0]
     B8 = stock_data['NFLX'][0]; B9 = stock_data['NVDA'][0]
     B10 = stock_data['QQQ'][0]; B11 = stock_data['SNAP'][0]
@@ -620,14 +621,14 @@ def write_batch_pre(stock_data):
     B20 = stock_data['PYPL'][0]; B21 = stock_data['QRVO'][0]
     B22 = stock_data["SQQQ"][0]; B23 = stock_data['PINS'][0]
     B24 = stock_data['EBAY'][0]; B25 = stock_data["CAT"][0]
-    B26 = stock_data['DHI'][0]; B27 = stock_data["TWTR"][0]
+    B26 = stock_data['DHI'][0]; B27 = stock_data["GOOGL"][0]
     B28 = stock_data["ZM"][0]; B29 = stock_data["DT"][0]
     B30 = stock_data["QFIN"][0]; B31 = stock_data["F"][0]
     B32 = stock_data["BA"][0]; B33 = stock_data["JETS"][0]
     #data for high
     C0 = stock_data['AAPL'][1]; C1 = stock_data['AMZN'][1]
     C2 = stock_data['BABA'][1]; C3 = stock_data['GS'][1]
-    C4 = stock_data['FB'][1]; C5 = stock_data['JD'][1]
+    C4 = stock_data['META'][1]; C5 = stock_data['JD'][1]
     C6 = stock_data['MRVL'][1]; C7 = stock_data['MSFT'][1]
     C8 = stock_data['NFLX'][1]; C9 = stock_data['NVDA'][1]
     C10 = stock_data['QQQ'][1]; C11 = stock_data['SNAP'][1]
@@ -638,14 +639,14 @@ def write_batch_pre(stock_data):
     C20 = stock_data['PYPL'][1]; C21 = stock_data['QRVO'][1]
     C22 = stock_data["SQQQ"][1]; C23 = stock_data['PINS'][1]
     C24 = stock_data['EBAY'][1]; C25 = stock_data["CAT"][1]
-    C26 = stock_data['DHI'][1]; C27 = stock_data["TWTR"][1]
+    C26 = stock_data['DHI'][1]; C27 = stock_data["GOOGL"][1]
     C28 = stock_data["ZM"][1]; C29 = stock_data["DT"][1]
     C30 = stock_data["QFIN"][1]; C31 = stock_data["F"][1]
     C32 = stock_data["BA"][1]; C33 = stock_data["JETS"][1]
     #data for low 
     D0 = stock_data['AAPL'][2]; D1 = stock_data['AMZN'][2]
     D2 = stock_data['BABA'][2]; D3 = stock_data['GS'][2]
-    D4 = stock_data['FB'][2]; D5 = stock_data['JD'][2]
+    D4 = stock_data['META'][2]; D5 = stock_data['JD'][2]
     D6 = stock_data['MRVL'][2]; D7 = stock_data['MSFT'][2]
     D8 = stock_data['NFLX'][2]; D9 = stock_data['NVDA'][2]
     D10 = stock_data['QQQ'][2]; D11 = stock_data['SNAP'][2]
@@ -656,14 +657,14 @@ def write_batch_pre(stock_data):
     D20 = stock_data['PYPL'][2]; D21 = stock_data['QRVO'][2]
     D22 = stock_data["SQQQ"][2]; D23 = stock_data['PINS'][2]
     D24 = stock_data['EBAY'][2]; D25 = stock_data["CAT"][2]
-    D26 = stock_data['DHI'][2]; D27 = stock_data["TWTR"][2]
+    D26 = stock_data['DHI'][2]; D27 = stock_data["GOOGL"][2]
     D28 = stock_data["ZM"][2]; D29 = stock_data["DT"][2]
     D30 = stock_data["QFIN"][2]; D31 = stock_data["F"][2]
     D32 = stock_data["BA"][2]; D33 = stock_data["JETS"][2]
     #data for close 
     E0 = stock_data['AAPL'][3]; E1 = stock_data['AMZN'][3]
     E2 = stock_data['BABA'][3]; E3 = stock_data['GS'][3]
-    E4 = stock_data['FB'][3]; E5 = stock_data['JD'][3]
+    E4 = stock_data['META'][3]; E5 = stock_data['JD'][3]
     E6 = stock_data['MRVL'][3]; E7 = stock_data['MSFT'][3]
     E8 = stock_data['NFLX'][3]; E9 = stock_data['NVDA'][3]
     E10 = stock_data['QQQ'][3]; E11 = stock_data['SNAP'][3]
@@ -674,14 +675,14 @@ def write_batch_pre(stock_data):
     E20 = stock_data['PYPL'][3]; E21 = stock_data['QRVO'][3]
     E22 = stock_data["SQQQ"][3]; E23 = stock_data['PINS'][3]
     E24 = stock_data['EBAY'][3]; E25 = stock_data["CAT"][3]
-    E26 = stock_data['DHI'][3]; E27 = stock_data["TWTR"][3]
+    E26 = stock_data['DHI'][3]; E27 = stock_data["GOOGL"][3]
     E28 = stock_data["ZM"][3]; E29 = stock_data["DT"][3]
     E30 = stock_data["QFIN"][3]; E31 = stock_data["F"][3]
     E32 = stock_data["BA"][3]; E33 = stock_data["JETS"][3]
     #data for time
     F0 = stock_data['AAPL'][4]; F1 = stock_data['AMZN'][4]
     F2 = stock_data['BABA'][4]; F3 = stock_data['GS'][4]
-    F4 = stock_data['FB'][4]; F5 = stock_data['JD'][4]
+    F4 = stock_data['META'][4]; F5 = stock_data['JD'][4]
     F6 = stock_data['MRVL'][4]; F7 = stock_data['MSFT'][4]
     F8 = stock_data['NFLX'][4]; F9 = stock_data['NVDA'][4]
     F10 = stock_data['QQQ'][4]; F11 = stock_data['SNAP'][4]
@@ -692,7 +693,7 @@ def write_batch_pre(stock_data):
     F20 = stock_data['PYPL'][4]; F21 = stock_data['QRVO'][4]
     F22 = stock_data["SQQQ"][4]; F23 = stock_data['PINS'][4]
     F24 = stock_data['EBAY'][4]; F25 = stock_data["CAT"][4]
-    F26 = stock_data['DHI'][4]; F27 = stock_data["TWTR"][4]
+    F26 = stock_data['DHI'][4]; F27 = stock_data["GOOGL"][4]
     F28 = stock_data["ZM"][4]; F29 = stock_data["DT"][4]
     F30 = stock_data["QFIN"][4]; F31 = stock_data["F"][4]
     F32 = stock_data["BA"][4]; F33 = stock_data["JETS"][4]
@@ -700,7 +701,7 @@ def write_batch_pre(stock_data):
     #data for classification
     G0 = stock_data['AAPL'][5]; G1 = stock_data['AMZN'][5]
     G2 = stock_data['BABA'][5]; G3 = stock_data['GS'][5]
-    G4 = stock_data['FB'][5]; G5 = stock_data['JD'][5]
+    G4 = stock_data['META'][5]; G5 = stock_data['JD'][5]
     G6 = stock_data['MRVL'][5]; G7 = stock_data['MSFT'][5]
     G8 = stock_data['NFLX'][5]; G9 = stock_data['NVDA'][5]
     G10 = stock_data['QQQ'][5]; G11 = stock_data['SNAP'][5]
@@ -711,7 +712,7 @@ def write_batch_pre(stock_data):
     G20 = stock_data['PYPL'][5]; G21 = stock_data['QRVO'][5]
     G22 = stock_data["SQQQ"][5]; G23 = stock_data['PINS'][5]
     G24 = stock_data['EBAY'][5]; G25 = stock_data["CAT"][5]
-    G26 = stock_data['DHI'][5]; G27 = stock_data["TWTR"][5]
+    G26 = stock_data['DHI'][5]; G27 = stock_data["GOOGL"][5]
     G28 = stock_data["ZM"][5]; G29 = stock_data["DT"][5]
     G30 = stock_data["QFIN"][5]; G31 = stock_data["F"][5]
     G32 = stock_data["BA"][5]; G33 = stock_data["JETS"][5]
@@ -720,7 +721,7 @@ def write_batch_pre(stock_data):
 
     H0 = stock_data['AAPL'][6]; H1 = stock_data['AMZN'][6]
     H2 = stock_data['BABA'][6]; H3 = stock_data['GS'][6]
-    H4 = stock_data['FB'][6]; H5 = stock_data['JD'][6]
+    H4 = stock_data['META'][6]; H5 = stock_data['JD'][6]
     H6 = stock_data['MRVL'][6]; H7 = stock_data['MSFT'][6]
     H8 = stock_data['NFLX'][6]; H9 = stock_data['NVDA'][6]
     H10 = stock_data['QQQ'][6]; H11 = stock_data['SNAP'][6]
@@ -731,7 +732,7 @@ def write_batch_pre(stock_data):
     H20 = stock_data['PYPL'][6]; H21 = stock_data['QRVO'][6]
     H22 = stock_data["SQQQ"][6]; H23 = stock_data['PINS'][6]
     H24 = stock_data['EBAY'][6]; H25 = stock_data["CAT"][6]
-    H26 = stock_data['DHI'][6]; H27 = stock_data["TWTR"][6]
+    H26 = stock_data['DHI'][6]; H27 = stock_data["GOOGL"][6]
     H28 = stock_data["ZM"][6]; H29 = stock_data["DT"][6]
     H30 = stock_data["QFIN"][6]; H31 = stock_data["F"][6]
     H32 = stock_data["BA"][6]; H33 = stock_data["JETS"][6]
@@ -755,11 +756,24 @@ def POLYGON_PULL(key, sym):
     l = dataIN['l']
     return (o, h, l, c, "")
 ################################################
+def FMP_PULL(key, sym):
+    url = "https://financialmodelingprep.com/api/v3/quote/" +sym+ ",FB?apikey=" + key
+    response = urlopen(url, cafile=certifi.where())
+    data = response.read().decode("utf-8")
+    r = json.loads(data)  
+    dataIN = r[0]
+    o = dataIN['open']
+    c = dataIN['price']
+    h = dataIN['dayHigh']
+    l = dataIN['dayLow']
+    e = dataIN['earningsAnnouncement'][0:10]
+    return (o, h, l, c, e)
+#################################################
 def write_stock_data(stocks):
     stock_data = {}
-    key = 'T6J5EEmZ0McifAokwSeNty2nL7L4JMkd'
+    key = "624b51b375a1fae6682dc955e6159fc1"
     for sym in stocks:
-        tup = POLYGON_PULL(key, sym)
+        tup = FMP_PULL(key, sym)
         stock_data[sym] = tup 
     return stock_data
 ################################################
@@ -769,7 +783,7 @@ def write_as_batch(stock_data):
     #data for open
     B0 = float(stock_data['AAPL'][0]); B1 = float(stock_data['AMZN'][0])
     B2 = float(stock_data['BABA'][0]); B3 = float(stock_data['GS'][0])
-    B4 = float(stock_data['FB'][0]); B5 = float(stock_data['JD'][0])
+    B4 = float(stock_data['META'][0]); B5 = float(stock_data['JD'][0])
     B6 = float(stock_data['MRVL'][0]); B7 = float(stock_data['MSFT'][0])
     B8 = float(stock_data['NFLX'][0]); B9 = float(stock_data['NVDA'][0])
     B10 = float(stock_data['QQQ'][0]); B11 = float(stock_data['SNAP'][0])
@@ -780,14 +794,14 @@ def write_as_batch(stock_data):
     B20 = float(stock_data['PYPL'][0]); B21 = float(stock_data['QRVO'][0])
     B22 = float(stock_data["SQQQ"][0]); B23 = float(stock_data['PINS'][0])
     B24 = float(stock_data['EBAY'][0]); B25 = float(stock_data["CAT"][0])
-    B26 = float(stock_data['DHI'][0]); B27 = float(stock_data["TWTR"][0])
+    B26 = float(stock_data['DHI'][0]); B27 = float(stock_data["GOOGL"][0])
     B28 = float(stock_data["ZM"][0]); B29 = float(stock_data["DT"][0])
     B30 = float(stock_data["QFIN"][0]); B31 = float(stock_data["F"][0])
     B32 = float(stock_data["BA"][0]); B33 = float(stock_data["JETS"][0])
     #data for high
     C0 = float(stock_data['AAPL'][1]); C1 = float(stock_data['AMZN'][1])
     C2 = float(stock_data['BABA'][1]); C3 = float(stock_data['GS'][1])
-    C4 = float(stock_data['FB'][1]); C5 = float(stock_data['JD'][1])
+    C4 = float(stock_data['META'][1]); C5 = float(stock_data['JD'][1])
     C6 = float(stock_data['MRVL'][1]); C7 = float(stock_data['MSFT'][1])
     C8 = float(stock_data['NFLX'][1]); C9 = float(stock_data['NVDA'][1])
     C10 = float(stock_data['QQQ'][1]); C11 = float(stock_data['SNAP'][1])
@@ -798,14 +812,14 @@ def write_as_batch(stock_data):
     C20 = float(stock_data['PYPL'][1]); C21 = float(stock_data['QRVO'][1])
     C22 = float(stock_data["SQQQ"][1]); C23 = float(stock_data['PINS'][1])
     C24 = float(stock_data['EBAY'][1]); C25 = float(stock_data["CAT"][1])
-    C26 = float(stock_data['DHI'][1]); C27 = float(stock_data["TWTR"][1])
+    C26 = float(stock_data['DHI'][1]); C27 = float(stock_data["GOOGL"][1])
     C28 = float(stock_data["ZM"][1]); C29 = float(stock_data["DT"][1])
     C30 = float(stock_data["QFIN"][1]); C31 = float(stock_data["F"][1])
     C32 = float(stock_data["BA"][1]); C33 = float(stock_data["JETS"][1])
     #data for low 
     D0 = float(stock_data['AAPL'][2]); D1 = float(stock_data['AMZN'][2])
     D2 = float(stock_data['BABA'][2]); D3 = float(stock_data['GS'][2])
-    D4 = float(stock_data['FB'][2]); D5 = float(stock_data['JD'][2])
+    D4 = float(stock_data['META'][2]); D5 = float(stock_data['JD'][2])
     D6 = float(stock_data['MRVL'][2]); D7 = float(stock_data['MSFT'][2])
     D8 = float(stock_data['NFLX'][2]); D9 = float(stock_data['NVDA'][2])
     D10 = float(stock_data['QQQ'][2]); D11 = float(stock_data['SNAP'][2])
@@ -816,14 +830,14 @@ def write_as_batch(stock_data):
     D20 = float(stock_data['PYPL'][2]); D21 = float(stock_data['QRVO'][2])
     D22 = float(stock_data["SQQQ"][2]); D23 = float(stock_data['PINS'][2])
     D24 = float(stock_data['EBAY'][2]); D25 = float(stock_data["CAT"][2])
-    D26 = float(stock_data['DHI'][2]); D27 = float(stock_data["TWTR"][2])
+    D26 = float(stock_data['DHI'][2]); D27 = float(stock_data["GOOGL"][2])
     D28 = float(stock_data["ZM"][2]); D29 = float(stock_data["DT"][2])
     D30 = float(stock_data["QFIN"][2]); D31 = float(stock_data["F"][2])
     D32 = float(stock_data["BA"][2]); D33 = float(stock_data["JETS"][2])
     #data for close 
     E0 = float(stock_data['AAPL'][3]); E1 = float(stock_data['AMZN'][3])
     E2 = float(stock_data['BABA'][3]); E3 = float(stock_data['GS'][3])
-    E4 = float(stock_data['FB'][3]); E5 = float(stock_data['JD'][3])
+    E4 = float(stock_data['META'][3]); E5 = float(stock_data['JD'][3])
     E6 = float(stock_data['MRVL'][3]); E7 = float(stock_data['MSFT'][3])
     E8 = float(stock_data['NFLX'][3]); E9 = float(stock_data['NVDA'][3])
     E10 = float(stock_data['QQQ'][3]); E11 = float(stock_data['SNAP'][3])
@@ -834,14 +848,14 @@ def write_as_batch(stock_data):
     E20 = float(stock_data['PYPL'][3]); E21 = float(stock_data['QRVO'][3])
     E22 = float(stock_data["SQQQ"][3]); E23 = float(stock_data['PINS'][3])
     E24 = float(stock_data['EBAY'][3]); E25 = float(stock_data["CAT"][3])
-    E26 = float(stock_data['DHI'][3]); E27 = float(stock_data["TWTR"][3])
+    E26 = float(stock_data['DHI'][3]); E27 = float(stock_data["GOOGL"][3])
     E28 = float(stock_data["ZM"][3]); E29 = float(stock_data["DT"][3])
     E30 = float(stock_data["QFIN"][3]); E31 = float(stock_data["F"][3])
     E32 = float(stock_data["BA"][3]); E33 = float(stock_data["JETS"][3])
     #data for time
     F0 = stock_data['AAPL'][4]; F1 = stock_data['AMZN'][4]
     F2 = stock_data['BABA'][4]; F3 = stock_data['GS'][4]
-    F4 = stock_data['FB'][4]; F5 = stock_data['JD'][4]
+    F4 = stock_data['META'][4]; F5 = stock_data['JD'][4]
     F6 = stock_data['MRVL'][4]; F7 = stock_data['MSFT'][4]
     F8 = stock_data['NFLX'][4]; F9 = stock_data['NVDA'][4]
     F10 = stock_data['QQQ'][4]; F11 = stock_data['SNAP'][4]
@@ -852,7 +866,7 @@ def write_as_batch(stock_data):
     F20 = stock_data['PYPL'][4]; F21 = stock_data['QRVO'][4]
     F22 = stock_data["SQQQ"][4]; F23 = stock_data['PINS'][4]
     F24 = stock_data['EBAY'][4]; F25 = stock_data["CAT"][4]
-    F26 = stock_data['DHI'][4]; F27 = stock_data["TWTR"][4]
+    F26 = stock_data['DHI'][4]; F27 = stock_data["GOOGL"][4]
     F28 = stock_data["ZM"][4]; F29 = stock_data["DT"][4]
     F30 = stock_data["QFIN"][4]; F31 = stock_data["F"][4]
     F32 = stock_data["BA"][4]; F33 = stock_data["JETS"][4]
@@ -963,8 +977,8 @@ def run_open_market(stocks, hour, minute, name_tuples):
 #############  Main  ###########################
 ################################################
 if __name__ == "__main__":
-    stocks = ['AAPL', 'AMZN', 'BABA', 'GS', 'FB', 'JD', 'MRVL', 'MSFT', 'NFLX', 'NVDA', 'QQQ', 'SNAP', 'SPY', 'TSLA', 'WFC', 'DKNG', 'NIO', 'DIS', "JNJ", 'NET', 'PYPL', 'QRVO', 'SQQQ', 'PINS', 'EBAY', 'CAT', 'DHI', 'TWTR', 'ZM', 'DT', 'QFIN', 'F', 'BA', 'JETS']
-    name_tuples = [('AAPL', ""), ('AMZN', ""), ('BABA', ""), ('GS', ""), ('FB', ""), ('JD', ""), ('MRVL', ""), ('MSFT', ""), ('NFLX', ""), ('NVDA', ""), ('QQQ', ""), ('SNAP', ""), ('SPY', ""), ('TSLA', ""), ('WFC', ""), ('DKNG', ""), ('NIO', ""), ('DIS', ""), ('JNJ', ""), ('NET', ""), ('PYPL', ""), ('QRVO', ""), ('SQQQ', ""), ('PINS', ""), ('EBAY', ""), ("CAT", ""), ('DHI', ""), ('TWTR', ""), ('ZM', ""), ('DT', ""), ('QFIN', ""), ('F', ""), ('BA', ""), ('JETS', "")]
+    stocks = ['AAPL', 'AMZN', 'BABA', 'GS', 'META', 'JD', 'MRVL', 'MSFT', 'NFLX', 'NVDA', 'QQQ', 'SNAP', 'SPY', 'TSLA', 'WFC', 'DKNG', 'NIO', 'DIS', "JNJ", 'NET', 'PYPL', 'QRVO', 'SQQQ', 'PINS', 'EBAY', 'CAT', 'DHI', 'GOOGL', 'ZM', 'DT', 'QFIN', 'F', 'BA', 'JETS']
+    name_tuples = [('AAPL', ""), ('AMZN', ""), ('BABA', ""), ('GS', ""), ('META', ""), ('JD', ""), ('MRVL', ""), ('MSFT', ""), ('NFLX', ""), ('NVDA', ""), ('QQQ', ""), ('SNAP', ""), ('SPY', ""), ('TSLA', ""), ('WFC', ""), ('DKNG', ""), ('NIO', ""), ('DIS', ""), ('JNJ', ""), ('NET', ""), ('PYPL', ""), ('QRVO', ""), ('SQQQ', ""), ('PINS', ""), ('EBAY', ""), ("CAT", ""), ('DHI', ""), ('GOOGL', ""), ('ZM', ""), ('DT', ""), ('QFIN', ""), ('F', ""), ('BA', ""), ('JETS', "")]
     #################################################
     row_dict = good_morning(stocks)
     #################################################

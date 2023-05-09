@@ -154,7 +154,7 @@ def new_row(symb, row_dict):
     N = "=M" + str(row -1) + "-M" + str(row)
     #day_num = int(sheet_instance.cell(row, 4).value) + 1
     day_num = row - 3
-     if(symb == "AAPL"): reg1 = "(0.1863*("+str(day_num)+')+47.546))'
+    if(symb == "AAPL"): reg1 = "(0.1863*("+str(day_num)+')+47.546))'
     if(symb == "AMZN"): reg1 = "(0.1611*("+str(day_num)+')+80))'
     if(symb == "BABA"): reg1 = "(0.1564*("+str(day_num)+')+217.84))'
     if(symb == "GS"): reg1 = "(1.2335*("+str(day_num)+')+206.63))'

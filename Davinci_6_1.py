@@ -596,7 +596,8 @@ def batch_pre(stocks):
     key = "624b51b375a1fae6682dc955e6159fc1"
     for sym in stocks:
       url = "https://financialmodelingprep.com/api/v3/quote/" +sym+ ",FB?apikey=" + key
-      response = urlopen(url, cafile=certifi.where())
+      context = ssl.create_default_context(cafile=certifi.where())
+      response = urlopen(url, context = context)
       data = response.read().decode("utf-8")
       r = json.loads(data) 
       dataIN = r[0]
@@ -758,7 +759,8 @@ def POLYGON_PULL(key, sym):
 ################################################
 def FMP_PULL(key, sym):
     url = "https://financialmodelingprep.com/api/v3/quote/" +sym+ ",FB?apikey=" + key
-    response = urlopen(url, cafile=certifi.where())
+    context = ssl.create_default_context(cafile=certifi.where())
+    response = urlopen(url, context = context)
     data = response.read().decode("utf-8")
     r = json.loads(data)  
     dataIN = r[0]

@@ -767,15 +767,18 @@ def FMP_PULL(sym):
     r = json.loads(data)  
     dataIN = r[0]
     o = dataIN['open']
-    print(o)
+   # print(o)
     c = dataIN['price']
-    print(c)
+    #print(c)
     h = dataIN['dayHigh']
-    print(h)
+    #print(h)
     l = dataIN['dayLow']
-    print(l)
-    e = dataIN['earningsAnnouncement'][0:10]
-    print(e)
+    #print(l)
+    try:  
+      e = dataIN['earningsAnnouncement'][0:10]
+    except:
+      e = ""
+    #print(e)
     return (o, h, l, c, e)
 #################################################
 def write_stock_data(stocks):

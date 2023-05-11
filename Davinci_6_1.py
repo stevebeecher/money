@@ -758,7 +758,8 @@ def POLYGON_PULL(key, sym):
     l = dataIN['l']
     return (o, h, l, c, "")
 ################################################
-def FMP_PULL(key, sym):
+def FMP_PULL(sym):
+    key = "624b51b375a1fae6682dc955e6159fc1"
     url = "https://financialmodelingprep.com/api/v3/quote/" +sym+ ",FB?apikey=" + key
     context = ssl.create_default_context(cafile=certifi.where())
     response = urlopen(url, context = context)
@@ -774,9 +775,8 @@ def FMP_PULL(key, sym):
 #################################################
 def write_stock_data(stocks):
     stock_data = {}
-    key = "624b51b375a1fae6682dc955e6159fc1"
     for sym in stocks:
-        tup = FMP_PULL(key, sym)
+        tup = FMP_PULL(sym)
         stock_data[sym] = tup 
     return stock_data
 ################################################

@@ -925,8 +925,8 @@ def good_night(stocks, row_dict, name_tuples):
         for sym in stocks:
             end_the_day(sym, row_dict)
             time.sleep(21)
-    check_for_resets('MoneyTree')
-    check_for_resets('MoneyTree2')
+    #check_for_resets('MoneyTree')
+    #check_for_resets('MoneyTree2')
     
     #name_tuples = check_name(name_tuples)
     time.sleep(100)

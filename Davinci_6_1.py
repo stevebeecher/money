@@ -202,7 +202,7 @@ def new_row(symb, row_dict):
     Y = "=(I" + str(row) + "-L" + str(row) + ")/I" + str(row)
     Z = "=U"+str(row)+"-V"+str(row)
     AA = "=(I"+str(row)+"-I"+str(row-1) + ")/I"+str(row-1)
-    AB = "=StockData!" + col + '6' #put date/timestamp here
+    AB = "=AVERAGE(C" + row +',E' +row+":H"+row+',J'+row+',W'+row+',Q'+row-1+',R'+row-1+')'
     AC = "=Z" + str(row) + "+AA" + str(row) 
     AD = '=ABS(E' + str(row) + '-I'+str(row)+')'
     AE = "=AVERAGE(AD" + str(int(row-41))+":AD"+str(row) + ")"

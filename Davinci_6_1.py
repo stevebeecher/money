@@ -491,7 +491,7 @@ def end_the_day(symb, row_dict):
     sheet_instance_1.update_cell(row, 16, H) #lock in high
     sheet_instance_1.update_cell(row, 9, L) #lock in low
     sheet_instance_1.update_cell(row, 11, C) #lock in close
-    sheet_instance_1.update_cell(row, 28, T) #lock in time
+    #sheet_instance_1.update_cell(row, 28, T) #lock in time
     sheet_instance_1.update_cell(row, 2, P) #lock in pre/mkt 
     print(symb, ' locked in')
 ################################################
@@ -767,18 +767,15 @@ def FMP_PULL(sym):
     r = json.loads(data)  
     dataIN = r[0]
     o = dataIN['open']
-   # print(o)
     c = dataIN['price']
-    #print(c)
     h = dataIN['dayHigh']
-    #print(h)
     l = dataIN['dayLow']
-    #print(l)
+  
     try:  
       e = dataIN['earningsAnnouncement'][0:10]
     except:
       e = ""
-    #print(e)
+    
     return (o, h, l, c, e)
 #################################################
 def write_stock_data(stocks):

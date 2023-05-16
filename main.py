@@ -19,17 +19,17 @@ def dif_YearlyHigh(sym):
     dataIN = Stock_LookUp(sym)
     yH = dataIN['yearHigh']
     c = dataIN['price']
-    return yH - c
+    return str(yH - c) + " points away, from the 52 week high of " + str(yH)
 
 def dif_YearLow(sym):
   dataIN = Stock_LookUp(sym)
   lH = dataIN['yearLow']
   c = dataIN['price']
-  return c - lH
+  return str(c - lH) + " points away, from the 52 week low of " + str(lH)
   
 while True:
   a = input("Enter symbl:")
   print()
-  print(a + " is " + str(dif_YearlyHigh(a)) + " points away from the yearly high.")
-  print(a + " is " + str(dif_YearLow(a)) + " points away from the yearly low.")
+  print(a + " is " + str(dif_YearlyHigh(a)))
+  print(a + " is " + str(dif_YearLow(a)))
   print()

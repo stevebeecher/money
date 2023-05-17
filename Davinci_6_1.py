@@ -112,7 +112,7 @@ def new_row(symb, row_dict):
     E = "=C" +str(row) + "-$X$2"
     F = "=(G" + str(row) + "+E" + str(row) + ")/2"
     G = "=C" + str(row) + "+$AC$2"
-    H = "=E" + str(row) + "-$AB$2"
+    H = "=E" + str(row) + "+$AB$2"
     I = "=StockData!" + col + "4" # low 
     J = "=E" + str(row) + "+$J$2*$AC$2"
     K = "=StockData!" + col + "5" #close  

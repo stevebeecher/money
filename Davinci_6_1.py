@@ -109,10 +109,10 @@ def new_row(symb, row_dict):
     B = "=StockData!" + col + '8'
     C = "=StockData!" + col + '2' # open
     D = "=D" + str(row-1) + "+1" 
-    E = "=B" +str(row) + "-$X$2"
+    E = "=C" +str(row) + "-$X$2"
     F = "=(G" + str(row) + "+E" + str(row) + ")/2"
-    G = "=E" + str(row) + "+$AC$2"
-    H = "=B" + str(row) + "-$AB$2"
+    G = "=C" + str(row) + "+$AC$2"
+    H = "=E" + str(row) + "-$AB$2"
     I = "=StockData!" + col + "4" # low 
     J = "=E" + str(row) + "+$J$2*$AC$2"
     K = "=StockData!" + col + "5" #close  

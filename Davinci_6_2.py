@@ -109,10 +109,10 @@ def new_row(symb, row_dict):
     B = "=StockData!" + col + '8'
     C = "=StockData!" + col + '2' # open
     D = "=D" + str(row-1) + "+1" 
-    E = "=B" +str(row) + "-$X$2"
+    E = "=C" +str(row) + "-$X$2"
     F = "=(G" + str(row) + "+E" + str(row) + ")/2"
-    G = "=E" + str(row) + "+$AC$2"
-    H = "=B" + str(row) + "-$AB$2"
+    G = "=C" + str(row) + "+$AC$2"
+    H = "=E" + str(row) + "-$AB$2"
     I = "=StockData!" + col + "4" # low 
     J = "=E" + str(row) + "+$J$2*$AC$2"
     K = "=StockData!" + col + "5" #close  
@@ -970,8 +970,8 @@ def write_as_batch(stock_data):
     G32 = float(stock_data["BA"][5]); G33 = float(stock_data["JETS"][5])
 
   # data for 52 wk High
-
-    F0 = float(stock_data['AAPL'][6]); F1 = float(stock_data['AMZN'][6])
+# CHANGE TO "h"
+    H0 = float(stock_data['AAPL'][6]); H1 = float(stock_data['AMZN'][6])
     F2 = float(stock_data['BABA'][6]); F3 = float(stock_data['GS'][6])
     F4 = float(stock_data['META'][6]); F5 = float(stock_data['JD'][6])
     F6 = float(stock_data['MRVL'][6]); F7 = float(stock_data['MSFT'][6])
@@ -990,7 +990,7 @@ def write_as_batch(stock_data):
     F32 = float(stock_data["BA"][6]); F33 = float(stock_data["JETS"][6])
   
   
-    sheet_instance.batch_update([{'range': 'B2:AI2', 'values': [[B0, B1, B2, B3, B4, B5, B6, B7, B8, B9, B10, B11, B12, B13, B14, B15, B16, B17, B18, B19, B20, B21, B22, B23, B24, B25, B26, B27, B28, B29, B30, B31, B32, B33]]},{'range': 'B3:AI3', 'values': [[C0, C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16, C17, C18, C19, C20, C21, C22, C23, C24, C25, C26, C27, C28, C29, C30, C31, C32, C33]]},{'range': 'B4:AI4', 'values': [[D0, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13, D14, D15, D16, D17, D18, D19, D20, D21, D22, D23, D24, D25, D26, D27, D28, D29, D30, D31, D32, D33]]}, {'range': 'B5:AI5', 'values': [[E0, E1, E2, E3, E4, E5, E6, E7, E8, E9, E10, E11, E12, E13, E14, E15, E16, E17, E18, E19, E20, E21, E22, E23, E24, E25, E26, E27, E28, E29, E30, E31, E32, E33]]}, {'range': 'B6:AI6', 'values': [[F0, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12, F13, F14, F15, F16, F17, F18, F19, F20, F21, F22, F23, F24, F25, F26, F27, F28, F29, F30, F31, F32, F33]]},{'range':'B7:AI7','values':[[G0, G1, G2, G3, G4, G5, G6, G7, G8, G9, G10, G11, G12, G13, G14, G15, G16, G17, G18, G19, G20, G21, G22, G23, G24, G25, G26, G27, G28, G29, G30, G31, G32, G33]]},{'range':'B9:AI9','values':[[F0, F1, F2, F3, F4, F5,F6, F7, F8, F9, F10, F11, F12, F13, F14, F15, F16, F17, F18, F19, F20, F21, F22, F23, F24, F25, F26, F27, F28, F29, F30, F31, F32, F33]]}], value_input_option = "USER_ENTERED")
+    sheet_instance.batch_update([{'range': 'B2:AI2', 'values': [[B0, B1, B2, B3, B4, B5, B6, B7, B8, B9, B10, B11, B12, B13, B14, B15, B16, B17, B18, B19, B20, B21, B22, B23, B24, B25, B26, B27, B28, B29, B30, B31, B32, B33]]},{'range': 'B3:AI3', 'values': [[C0, C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16, C17, C18, C19, C20, C21, C22, C23, C24, C25, C26, C27, C28, C29, C30, C31, C32, C33]]},{'range': 'B4:AI4', 'values': [[D0, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13, D14, D15, D16, D17, D18, D19, D20, D21, D22, D23, D24, D25, D26, D27, D28, D29, D30, D31, D32, D33]]}, {'range': 'B5:AI5', 'values': [[E0, E1, E2, E3, E4, E5, E6, E7, E8, E9, E10, E11, E12, E13, E14, E15, E16, E17, E18, E19, E20, E21, E22, E23, E24, E25, E26, E27, E28, E29, E30, E31, E32, E33]]}, {'range': 'B6:AI6', 'values': [[F0, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12, F13, F14, F15, F16, F17, F18, F19, F20, F21, F22, F23, F24, F25, F26, F27, F28, F29, F30, F31, F32, F33]]},{'range':'B7:AI7','values':[[G0, G1, G2, G3, G4, G5, G6, G7, G8, G9, G10, G11, G12, G13, G14, G15, G16, G17, G18, G19, G20, G21, G22, G23, G24, G25, G26, G27, G28, G29, G30, G31, G32, G33]]},{'range':'B9:AI9','values':[[F0, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12, F13, F14, F15, F16, F17, F18, F19, F20, F21, F22, F23, F24, F25, F26, F27, F28, F29, F30, F31, F32, F33]]}], value_input_option = "USER_ENTERED")
 
 ################################################
 def good_morning(stocks):

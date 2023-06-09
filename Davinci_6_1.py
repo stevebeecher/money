@@ -193,7 +193,7 @@ def new_row(symb, row_dict):
     P = "=StockData!" + col + "3" #put high here
     Q = "=S"+str(row) + "-($Q$2*$AC$2)"
     R = "=(S"+str(row)+"+Q" + str(row)+")/2"
-    S = "=B"+ str(row)+"+$X$2"
+    S = "=C"+ str(row)+"+$X$2"
     T = "=S" + str(row) + "+$AB$2"
     U = "=(K" + str(row) + "-I" + str(row)+")/I" + str(row)
     V = "=(P" + str(row) + "-K" + str(row) + ")/K" + str(row)

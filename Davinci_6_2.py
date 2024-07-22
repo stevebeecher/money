@@ -125,7 +125,7 @@ def new_row(symb, row_dict):
     if(symb == "MRVL"): reg = "=0.0522*(D"+str(row)+')+21.586'
     if(symb == "MSFT"): reg = "=0.3085*(D"+str(row)+')+135.19'
     if(symb == "NFLX"): reg = "=1.0441*(D"+str(row)+')+246.91'
-    if(symb == "NVDA"): reg = "=0.292*(D"+str(row)+')+29.2'
+    if(symb == "NVDA"): reg = "=0.3098*(D"+str(row)+')-276.04'
     if(symb == 'QQQ'): reg = "=0.1208*(D"+str(row)+')+95.709'
     if(symb == 'SNAP'): reg = "=0.0847*(D"+str(row)+')+8.3067'
     if(symb == 'SPY'): reg = "=0.101*(D"+str(row)+')+205.08'
@@ -164,7 +164,7 @@ def new_row(symb, row_dict):
     if(symb == "MRVL"): reg1 = "(0.0522*("+str(day_num)+')+21.586))'
     if(symb == "MSFT"): reg1 = "(0.3085*("+str(day_num)+')+135.19))'
     if(symb == "NFLX"): reg1 = "(1.0441*("+str(day_num)+')+246.91))'
-    if(symb == "NVDA"): reg1 = "(0.292*("+str(day_num)+')+29.2))'
+    if(symb == "NVDA"): reg1 = "(0.3098*("+str(day_num)+')-276.04))'
     if(symb == "QQQ"): reg1 = "(0.1208*("+str(day_num)+')+95.709))'
     if(symb == "SNAP"): reg1 = "(0.0847*("+str(day_num)+')+8.3067))'
     if(symb == "SPY"): reg1 = "(0.101*("+str(day_num)+')+205.08))'
@@ -970,27 +970,27 @@ def write_as_batch(stock_data):
     G32 = float(stock_data["BA"][5]); G33 = float(stock_data["JETS"][5])
 
   # data for 52 wk High
-# CHANGE TO "h"
+
     H0 = float(stock_data['AAPL'][6]); H1 = float(stock_data['AMZN'][6])
-    F2 = float(stock_data['BABA'][6]); F3 = float(stock_data['GS'][6])
-    F4 = float(stock_data['META'][6]); F5 = float(stock_data['JD'][6])
-    F6 = float(stock_data['MRVL'][6]); F7 = float(stock_data['MSFT'][6])
-    F8 = float(stock_data['NFLX'][6]); F9 = float(stock_data['NVDA'][6])
-    F10 = float(stock_data['QQQ'][6]); F11 = float(stock_data['SNAP'][6])
-    F12 = float(stock_data['SPY'][6]); F13 = float(stock_data['TSLA'][6])
-    F14 = float(stock_data['WFC'][6]); F15 = float(stock_data['DKNG'][6])
-    F16 = float(stock_data['NIO'][6]); F17 = float(stock_data['DIS'][6])
-    F18 = float(stock_data['JNJ'][6]); F19 = float(stock_data['NET'][6])
-    F20 = float(stock_data['PYPL'][6]); F21 = float(stock_data['QRVO'][6])
-    F22 = float(stock_data["SQQQ"][F]); F23 = float(stock_data['PINS'][6])
-    F24 = float(stock_data['EBAY'][6]); F25 = float(stock_data["CAT"][6])
-    F26 = float(stock_data['DHI'][6]); F27 = float(stock_data["GOOGL"][6])
-    F28 = float(stock_data["ZM"][6]); F29 = float(stock_data["DT"][6])
-    F30 = float(stock_data["QFIN"][6]); F31 = float(stock_data["F"][6])
-    F32 = float(stock_data["BA"][6]); F33 = float(stock_data["JETS"][6])
+    H2 = float(stock_data['BABA'][6]); H3 = float(stock_data['GS'][6])
+    H4 = float(stock_data['META'][6]); H5 = float(stock_data['JD'][6])
+    H6 = float(stock_data['MRVL'][6]); H7 = float(stock_data['MSFT'][6])
+    H8 = float(stock_data['NFLX'][6]); H9 = float(stock_data['NVDA'][6])
+    H10 = float(stock_data['QQQ'][6]); H11 = float(stock_data['SNAP'][6])
+    H12 = float(stock_data['SPY'][6]); H13 = float(stock_data['TSLA'][6])
+    H14 = float(stock_data['WFC'][6]); H15 = float(stock_data['DKNG'][6])
+    H16 = float(stock_data['NIO'][6]); H17 = float(stock_data['DIS'][6])
+    H18 = float(stock_data['JNJ'][6]); H19 = float(stock_data['NET'][6])
+    H20 = float(stock_data['PYPL'][6]); H21 = float(stock_data['QRVO'][6])
+    H22 = float(stock_data["SQQQ"][F]); H23 = float(stock_data['PINS'][6])
+    H24 = float(stock_data['EBAY'][6]); H25 = float(stock_data["CAT"][6])
+    H26 = float(stock_data['DHI'][6]); H27 = float(stock_data["GOOGL"][6])
+    H28 = float(stock_data["ZM"][6]); H29 = float(stock_data["DT"][6])
+    H30 = float(stock_data["QFIN"][6]); H31 = float(stock_data["F"][6])
+    H32 = float(stock_data["BA"][6]); H33 = float(stock_data["JETS"][6])
   
   
-    sheet_instance.batch_update([{'range': 'B2:AI2', 'values': [[B0, B1, B2, B3, B4, B5, B6, B7, B8, B9, B10, B11, B12, B13, B14, B15, B16, B17, B18, B19, B20, B21, B22, B23, B24, B25, B26, B27, B28, B29, B30, B31, B32, B33]]},{'range': 'B3:AI3', 'values': [[C0, C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16, C17, C18, C19, C20, C21, C22, C23, C24, C25, C26, C27, C28, C29, C30, C31, C32, C33]]},{'range': 'B4:AI4', 'values': [[D0, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13, D14, D15, D16, D17, D18, D19, D20, D21, D22, D23, D24, D25, D26, D27, D28, D29, D30, D31, D32, D33]]}, {'range': 'B5:AI5', 'values': [[E0, E1, E2, E3, E4, E5, E6, E7, E8, E9, E10, E11, E12, E13, E14, E15, E16, E17, E18, E19, E20, E21, E22, E23, E24, E25, E26, E27, E28, E29, E30, E31, E32, E33]]}, {'range': 'B6:AI6', 'values': [[F0, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12, F13, F14, F15, F16, F17, F18, F19, F20, F21, F22, F23, F24, F25, F26, F27, F28, F29, F30, F31, F32, F33]]},{'range':'B7:AI7','values':[[G0, G1, G2, G3, G4, G5, G6, G7, G8, G9, G10, G11, G12, G13, G14, G15, G16, G17, G18, G19, G20, G21, G22, G23, G24, G25, G26, G27, G28, G29, G30, G31, G32, G33]]},{'range':'B9:AI9','values':[[F0, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12, F13, F14, F15, F16, F17, F18, F19, F20, F21, F22, F23, F24, F25, F26, F27, F28, F29, F30, F31, F32, F33]]}], value_input_option = "USER_ENTERED")
+    sheet_instance.batch_update([{'range': 'B2:AI2', 'values': [[B0, B1, B2, B3, B4, B5, B6, B7, B8, B9, B10, B11, B12, B13, B14, B15, B16, B17, B18, B19, B20, B21, B22, B23, B24, B25, B26, B27, B28, B29, B30, B31, B32, B33]]},{'range': 'B3:AI3', 'values': [[C0, C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16, C17, C18, C19, C20, C21, C22, C23, C24, C25, C26, C27, C28, C29, C30, C31, C32, C33]]},{'range': 'B4:AI4', 'values': [[D0, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13, D14, D15, D16, D17, D18, D19, D20, D21, D22, D23, D24, D25, D26, D27, D28, D29, D30, D31, D32, D33]]}, {'range': 'B5:AI5', 'values': [[E0, E1, E2, E3, E4, E5, E6, E7, E8, E9, E10, E11, E12, E13, E14, E15, E16, E17, E18, E19, E20, E21, E22, E23, E24, E25, E26, E27, E28, E29, E30, E31, E32, E33]]}, {'range': 'B6:AI6', 'values': [[F0, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12, F13, F14, F15, F16, F17, F18, F19, F20, F21, F22, F23, F24, F25, F26, F27, F28, F29, F30, F31, F32, F33]]},{'range':'B7:AI7','values':[[G0, G1, G2, G3, G4, G5, G6, G7, G8, G9, G10, G11, G12, G13, G14, G15, G16, G17, G18, G19, G20, G21, G22, G23, G24, G25, G26, G27, G28, G29, G30, G31, G32, G33]]},{'range':'B9:AI9','values':[[H0, H1, H2, H3, H4, H5, H6, H7, H8, H9, H10, H11, H12, H13, H14, H15, H16, H17, H18, H19, H20, H21, H22, H23, H24, H25, H26, H27, H28, H29, H30, H31, H32, H33]]}], value_input_option = "USER_ENTERED")
 
 ################################################
 def good_morning(stocks):

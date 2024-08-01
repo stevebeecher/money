@@ -111,8 +111,8 @@ def new_row(symb, row_dict):
     D = "=D" + str(row-1) + "+1" 
     E = "=C" +str(row) + "-$X$2"
     F = "=(G" + str(row) + "+E" + str(row) + ")/2"
-    G = "=C" + str(row) + "-$AB$2"
-    H = "=E" + str(row) + "+$AC$2"
+    G = "=(H" + str(row) + "+E" + str(row) + ")/2"
+    H = "=C" + str(row) + "-$AC$2"
     I = "=StockData!" + col + "4" # low 
     J = "=E" + str(row) + "+$J$2*$AC$2"
     K = "=StockData!" + col + "5" #close  
@@ -193,7 +193,7 @@ def new_row(symb, row_dict):
     P = "=StockData!" + col + "3" #put high here
     Q = "=S"+str(row) + "-($Q$2*$AC$2)"
     R = "=(S"+str(row)+"+Q" + str(row)+")/2"
-    S = "=C"+ str(row)+"+$X$2"
+    S = "=C"+ str(row)+"+$AB$2"
     T = "=S" + str(row) + "+$AB$2"
     U = "=(K" + str(row) + "-I" + str(row)+")/I" + str(row)
     V = "=(P" + str(row) + "-K" + str(row) + ")/K" + str(row)

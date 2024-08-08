@@ -167,7 +167,7 @@ def new_row(symb, row_dict):
     if(symb == "NVDA"): reg1 = "(0.3098*("+str(day_num)+')-276.04))'
     if(symb == "QQQ"): reg1 = "(0.1553*("+str(day_num)+')+228.17))'
     if(symb == "SNAP"): reg1 = "(0.0847*("+str(day_num)+')+8.3067))'
-    if(symb == "SPY"): reg1 = "(0.1546*("+str(day_num)+')+309.22)'
+    if(symb == "SPY"): reg1 = "(0.1546*("+str(day_num)+')+309.22))'
     if(symb == "TSLA"): reg1 = "(0.8081*("+str(day_num)+')+80.85))'
     if(symb == "WFC"): reg1 = "(-0.0162*("+str(day_num)+')+27.398))'
     if(symb == "DKNG"): reg1 = "(0.1711*("+str(day_num)+')+12.659))'
